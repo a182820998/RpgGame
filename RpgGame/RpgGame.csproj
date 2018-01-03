@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C1D22BC0-6BF5-4495-9F19-965E12E9702F}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>RpgGame</RootNamespace>
+    <AssemblyName>RpgGame</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameDb\DataInitializer.cs" />
+    <Compile Include="GameDb\RpgDbContext.cs" />
+    <Compile Include="IView.cs" />
+    <Compile Include="Migrations\201712290717142_initial.cs" />
+    <Compile Include="Migrations\201712290717142_initial.Designer.cs">
+      <DependentUpon>201712290717142_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712290733127_truncate.cs" />
+    <Compile Include="Migrations\201712290733127_truncate.Designer.cs">
+      <DependentUpon>201712290733127_truncate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712290744435_retruncate_1.cs" />
+    <Compile Include="Migrations\201712290744435_retruncate_1.Designer.cs">
+      <DependentUpon>201712290744435_retruncate_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712290745371_retruncate_2.cs" />
+    <Compile Include="Migrations\201712290745371_retruncate_2.Designer.cs">
+      <DependentUpon>201712290745371_retruncate_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712290747228_truncate_finish.cs" />
+    <Compile Include="Migrations\201712290747228_truncate_finish.Designer.cs">
+      <DependentUpon>201712290747228_truncate_finish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712290854410_redesign_table.cs" />
+    <Compile Include="Migrations\201712290854410_redesign_table.Designer.cs">
+      <DependentUpon>201712290854410_redesign_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712290859479_cancel_job_identity.cs" />
+    <Compile Include="Migrations\201712290859479_cancel_job_identity.Designer.cs">
+      <DependentUpon>201712290859479_cancel_job_identity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712290904202_test_character_identity.cs" />
+    <Compile Include="Migrations\201712290904202_test_character_identity.Designer.cs">
+      <DependentUpon>201712290904202_test_character_identity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712290909497_add_job_identity.cs" />
+    <Compile Include="Migrations\201712290909497_add_job_identity.Designer.cs">
+      <DependentUpon>201712290909497_add_job_identity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712291237187_test_job_as_char_property.cs" />
+    <Compile Include="Migrations\201712291237187_test_job_as_char_property.Designer.cs">
+      <DependentUpon>201712291237187_test_job_as_char_property.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712291244468_fail_to_job_property.cs" />
+    <Compile Include="Migrations\201712291244468_fail_to_job_property.Designer.cs">
+      <DependentUpon>201712291244468_fail_to_job_property.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712291251027_check_column.cs" />
+    <Compile Include="Migrations\201712291251027_check_column.Designer.cs">
+      <DependentUpon>201712291251027_check_column.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801010633250_sf314.cs" />
+    <Compile Include="Migrations\201801010633250_sf314.Designer.cs">
+      <DependentUpon>201801010633250_sf314.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\GameCharacter\BaseCharacter.cs" />
+    <Compile Include="Model\GameJob\DefenseJob.cs" />
+    <Compile Include="Model\GameJob\Job.cs" />
+    <Compile Include="Model\GameCharacter\UserCharacter.cs" />
+    <Compile Include="Model\GameCharacter\GameMonster.cs" />
+    <Compile Include="Model\GameJob\IAntagonisticBy.cs" />
+    <Compile Include="Model\GameJob\IDamageBy.cs" />
+    <Compile Include="Model\GameJob\MeleeJob.cs" />
+    <Compile Include="Model\GameJob\RemoteJob.cs" />
+    <Compile Include="Presenter\GameSystem.cs" />
+    <Compile Include="Presenter\IPresenter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 與 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201712290717142_initial.resx">
+      <DependentUpon>201712290717142_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712290733127_truncate.resx">
+      <DependentUpon>201712290733127_truncate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712290744435_retruncate_1.resx">
+      <DependentUpon>201712290744435_retruncate_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712290745371_retruncate_2.resx">
+      <DependentUpon>201712290745371_retruncate_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712290747228_truncate_finish.resx">
+      <DependentUpon>201712290747228_truncate_finish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712290854410_redesign_table.resx">
+      <DependentUpon>201712290854410_redesign_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712290859479_cancel_job_identity.resx">
+      <DependentUpon>201712290859479_cancel_job_identity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712290904202_test_character_identity.resx">
+      <DependentUpon>201712290904202_test_character_identity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712290909497_add_job_identity.resx">
+      <DependentUpon>201712290909497_add_job_identity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712291237187_test_job_as_char_property.resx">
+      <DependentUpon>201712291237187_test_job_as_char_property.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712291244468_fail_to_job_property.resx">
+      <DependentUpon>201712291244468_fail_to_job_property.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712291251027_check_column.resx">
+      <DependentUpon>201712291251027_check_column.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801010633250_sf314.resx">
+      <DependentUpon>201801010633250_sf314.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\RpgGameDb.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\RpgGameDb_log.ldf">
+      <DependentUpon>RpgGameDb.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
