@@ -11,6 +11,7 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -23,7 +24,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -69,57 +69,9 @@
     <Compile Include="GameDb\DataInitializer.cs" />
     <Compile Include="GameDb\RpgDbContext.cs" />
     <Compile Include="IView.cs" />
-    <Compile Include="Migrations\201712290717142_initial.cs" />
-    <Compile Include="Migrations\201712290717142_initial.Designer.cs">
-      <DependentUpon>201712290717142_initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712290733127_truncate.cs" />
-    <Compile Include="Migrations\201712290733127_truncate.Designer.cs">
-      <DependentUpon>201712290733127_truncate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712290744435_retruncate_1.cs" />
-    <Compile Include="Migrations\201712290744435_retruncate_1.Designer.cs">
-      <DependentUpon>201712290744435_retruncate_1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712290745371_retruncate_2.cs" />
-    <Compile Include="Migrations\201712290745371_retruncate_2.Designer.cs">
-      <DependentUpon>201712290745371_retruncate_2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712290747228_truncate_finish.cs" />
-    <Compile Include="Migrations\201712290747228_truncate_finish.Designer.cs">
-      <DependentUpon>201712290747228_truncate_finish.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712290854410_redesign_table.cs" />
-    <Compile Include="Migrations\201712290854410_redesign_table.Designer.cs">
-      <DependentUpon>201712290854410_redesign_table.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712290859479_cancel_job_identity.cs" />
-    <Compile Include="Migrations\201712290859479_cancel_job_identity.Designer.cs">
-      <DependentUpon>201712290859479_cancel_job_identity.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712290904202_test_character_identity.cs" />
-    <Compile Include="Migrations\201712290904202_test_character_identity.Designer.cs">
-      <DependentUpon>201712290904202_test_character_identity.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712290909497_add_job_identity.cs" />
-    <Compile Include="Migrations\201712290909497_add_job_identity.Designer.cs">
-      <DependentUpon>201712290909497_add_job_identity.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712291237187_test_job_as_char_property.cs" />
-    <Compile Include="Migrations\201712291237187_test_job_as_char_property.Designer.cs">
-      <DependentUpon>201712291237187_test_job_as_char_property.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712291244468_fail_to_job_property.cs" />
-    <Compile Include="Migrations\201712291244468_fail_to_job_property.Designer.cs">
-      <DependentUpon>201712291244468_fail_to_job_property.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712291251027_check_column.cs" />
-    <Compile Include="Migrations\201712291251027_check_column.Designer.cs">
-      <DependentUpon>201712291251027_check_column.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201801010633250_sf314.cs" />
-    <Compile Include="Migrations\201801010633250_sf314.Designer.cs">
-      <DependentUpon>201801010633250_sf314.cs</DependentUpon>
+    <Compile Include="Migrations\201801060518306_initial.cs" />
+    <Compile Include="Migrations\201801060518306_initial.Designer.cs">
+      <DependentUpon>201801060518306_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\GameCharacter\BaseCharacter.cs" />
@@ -154,55 +106,11 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201712290717142_initial.resx">
-      <DependentUpon>201712290717142_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201801060518306_initial.resx">
+      <DependentUpon>201801060518306_initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712290733127_truncate.resx">
-      <DependentUpon>201712290733127_truncate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712290744435_retruncate_1.resx">
-      <DependentUpon>201712290744435_retruncate_1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712290745371_retruncate_2.resx">
-      <DependentUpon>201712290745371_retruncate_2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712290747228_truncate_finish.resx">
-      <DependentUpon>201712290747228_truncate_finish.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712290854410_redesign_table.resx">
-      <DependentUpon>201712290854410_redesign_table.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712290859479_cancel_job_identity.resx">
-      <DependentUpon>201712290859479_cancel_job_identity.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712290904202_test_character_identity.resx">
-      <DependentUpon>201712290904202_test_character_identity.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712290909497_add_job_identity.resx">
-      <DependentUpon>201712290909497_add_job_identity.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712291237187_test_job_as_char_property.resx">
-      <DependentUpon>201712291237187_test_job_as_char_property.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712291244468_fail_to_job_property.resx">
-      <DependentUpon>201712291244468_fail_to_job_property.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712291251027_check_column.resx">
-      <DependentUpon>201712291251027_check_column.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201801010633250_sf314.resx">
-      <DependentUpon>201801010633250_sf314.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_Data\RpgGameDb.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="App_Data\RpgGameDb_log.ldf">
-      <DependentUpon>RpgGameDb.mdf</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

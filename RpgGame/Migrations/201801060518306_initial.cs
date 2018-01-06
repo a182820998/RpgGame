@@ -22,9 +22,7 @@ namespace RpgGame.Migrations
                         TotalFightTimes = c.Int(nullable: false),
                         FailFightTimes = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.CharacterId)
-                .ForeignKey("dbo.Jobs", t => t.JobId, cascadeDelete: true)
-                .Index(t => t.JobId);
+                .PrimaryKey(t => t.CharacterId);
             
             CreateTable(
                 "dbo.Jobs",
@@ -55,18 +53,12 @@ namespace RpgGame.Migrations
                         TotalFightTimes = c.Int(nullable: false),
                         FailFightTimes = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.CharacterId)
-                .ForeignKey("dbo.Jobs", t => t.JobId, cascadeDelete: true)
-                .Index(t => t.JobId);
+                .PrimaryKey(t => t.CharacterId);
             
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.GameMonsters", "JobId", "dbo.Jobs");
-            DropForeignKey("dbo.UserCharacters", "JobId", "dbo.Jobs");
-            DropIndex("dbo.GameMonsters", new[] { "JobId" });
-            DropIndex("dbo.UserCharacters", new[] { "JobId" });
             DropTable("dbo.GameMonsters");
             DropTable("dbo.Jobs");
             DropTable("dbo.UserCharacters");
